@@ -59,9 +59,31 @@ export function App() {
         {view === 'generator' && <Generator />}
         {view === 'links' && <LinkInspector />}
       </main>
-
+      
       <footer className="footer">
-        <small>Desarrollado por Elia</small>
+        <small>
+          Desarrollado por{' '}
+          <a
+            href="https://github.com/eliaalfonzo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar el perfil de GitHub de Elia"
+            style={{
+              color: 'inherit',
+              fontWeight: 600,
+              textDecoration: 'none',
+              transition: 'opacity 0.2s ease',
+            }}
+            onMouseEnter={(event) => {
+              event.currentTarget.style.opacity = '0.7';
+            }}
+            onMouseLeave={(event) => {
+              event.currentTarget.style.opacity = '1';
+            }}
+          >
+            Elia
+          </a>
+        </small>
       </footer>
 
       <nav className="bottomnav" aria-label="Navegación móvil">
